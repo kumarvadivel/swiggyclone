@@ -1,14 +1,15 @@
 import { Component, OnInit, OnChanges, SimpleChange, SimpleChanges } from '@angular/core';
 import { SharedService } from '../../sharedservice.service';
-import { Subscription } from 'rxjs';
+import { Subscription, from } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute, Router } from '@angular/router';
+import { SharedcartService} from '../../sharedcartservice.service'
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
   styleUrls: ['./cart.component.css']
 })
-export class CartComponent {
+export class CartComponent implements OnInit {
 cartdata:any
 subtotal:any;
 clickEventsubscription:Subscription;
@@ -26,19 +27,26 @@ inc($event,hotelname,foodname){
     localStorage.setItem("cart",JSON.stringify(this.data))
     this.refresh()
     //console.log(hotelname,foodname)
-    
+    this.sharedcartService.sendincClickEvent()
     
 }
 dec($event,hotelname,foodname){
  // console.log("inc")
+
   this.data=JSON.parse(localStorage.getItem("cart"))
    // console.log(this.cartdata)
     //console.log(this.data)
     let index=this.data.findIndex(p=>p.hotelname==hotelname)
     let foodindex=this.data[index].foods.findIndex(p=>p.foodname==foodname)
-    this.data[index].foods[foodindex].quantity-=1
-    localStorage.setItem("cart",JSON.stringify(this.data))
-    this.refresh()
+    if(this.data[index].foods[foodindex].quantity==1){
+     
+    }
+    else{
+      this.data[index].foods[foodindex].quantity-=1
+      localStorage.setItem("cart",JSON.stringify(this.data))
+      this.refresh()
+    }
+    this.sharedcartService.senddecClickEvent()
 }
 remove($event,hotelname,foodname){
   //console.log("inc")
@@ -92,7 +100,13 @@ refresh(){
   
 
 }
-  constructor(private route: ActivatedRoute,private httpclient:HttpClient,private sharedService:SharedService,private router:Router) { 
+  constructor(private route: ActivatedRoute,private httpclient:HttpClient,private sharedService:SharedService,private router:Router,private sharedcartService:SharedcartService) { 
+    
+
+  }
+
+ 
+  ngOnInit(){
     this.id = this.route.snapshot.paramMap.get('id');
     this.httpclient.get("http://localhost:3000/gethotel/"+this.id).subscribe(data=>{
     this.hotel=data;
@@ -116,10 +130,6 @@ refresh(){
    
   }
     
-
   }
-
- 
-  
 
 }
