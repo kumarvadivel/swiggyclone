@@ -1,0 +1,45 @@
+.fullarea3{
+    display: flex;
+    height: 100vh;
+}
+.col1{
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    padding: 183px 10px 10px 153px;
+}
+.col2{
+    width: 30vw;
+}
+.mockup{
+    height: 80%;
+    width: 90%;
+}
+.al{
+    margin-left: 90px;
+    margin-top: 0px;
+}
+.ml{
+    margin-left: 0px;
+    margin-top: 136px;
+}
+.head{
+    color:#282C3f;
+    font-size: 40px;
+    font-weight: 600;
+    font-family: roboto,"sans-serif";
+}
+.body{
+    color:#9a8f93;
+    font-size: 24px;
+    padding: 20px 0 0 0px;
+    font-family: roboto,"sans-serif";
+
+}
+.imgico{
+    margin-left: 34px;
+}
+.ico{
+    display: flex;
+    margin-top: 37px;
+}

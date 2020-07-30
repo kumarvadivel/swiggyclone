@@ -1,0 +1,13 @@
+<div class="fullarea">
+  <header class="header">
+    <span class="foods">Foods</span>
+    <span>{{fooddata.length}} items</span>
+
+  </header>
+       
+    <div class="foodarea">
+      <app-foodcard *ngFor="let data of fooddata" [food]='data'></app-foodcard>
+     
+    </div>
+
+</div>

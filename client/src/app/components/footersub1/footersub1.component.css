@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+.footer1area{
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom:1px solid #4d4d4d ;
+}
+.listitem{
+    padding: 30px 0px 15px 0;
+    font-family: 'Roboto','sans-serif';
+    font-weight: lighter;
+    font-size: larger;
+
+}
+.listitem1{
+    padding-bottom: 60px;
+}
+.footertit{
+    color:#4d4d4d;
+    font-family: 'Roboto','sans-serif';
+    font-weight: bolder;
+    font-size: larger;
+}
+li{
+    list-style: none;
+    text-overflow: unset;
+    padding: 15px 15px 15px 0;
+}
+li:hover{
+    font-weight: bold;
+}
+img{
+    height: 70px;
+    width: 220;
+}
+.app-icon{
+    padding-left: 142px;
+    height: 30px;
+
+}
+.footerlist{
+    width: 370px;
+    
+}
+.andr{
+    padding-bottom: 70px;
+    width: 220px;
+}
+.ios{
+    width:220px;
+}

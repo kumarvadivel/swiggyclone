@@ -1,0 +1,48 @@
+<div class="fullarea">
+    <div class="yt" *ngIf="!cartdata">
+        <span class="as">Cart Empty</span>
+        <img class="gg" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_480/Cart_empty_-_menu_2x_ejjkf2"/>
+        <span class="ki">Good food is always cooking! Go ahead, order some yummy items from the menu.</span>
+    </div>
+    <div *ngIf="cartdata">
+        <header class="header">
+            <span class="head">Cart</span>
+            <span class="head it">{{cartdata.length}} items</span>
+        </header>
+        <div class="data" *ngFor="let cart of cartdata">
+            <div class="ds">
+                from
+                <span class="hotelname">{{cart.hotelname}}</span>
+            
+            </div>
+           <span class="head it sub">{{cart.foods.length}} items</span>
+            <ul>
+                <li *ngFor="let food of cart.foods">
+                    <div class="cont">
+                        <span class="fn">
+                            <span  class="veg-indian-vegetarian icon"></span>
+                            {{food.foodname}}
+                        </span>
+                        <span class="inc in">
+                            <button class="but" (click)='inc($event,cart.hotelname,food.foodname)'>+</button>
+                            <div class="countarea">{{food.quantity}}</div>
+                            <button class="but" (click)='dec($event,cart.hotelname,food.foodname)'>-</button>
+                        </span>
+
+                        <span class="rup">₹{{food.quantity*food.rate}}</span>
+                        <div class="rem" (click)="remove($event,cart.hotelname,food.foodname)">X</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="io">
+            <div class="ip"><span class="vt">Subtotal</span><span class="kd">Extra charges may apply*</span></div>
+            <span class="lo">₹{{subtotal}}</span>
+
+        </div>
+
+        <div class="check">
+            <button (click)="checkout($event)" class="out"> CHECKOUT →</button>
+        </div>
+    
+</div>

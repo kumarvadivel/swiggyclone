@@ -1,0 +1,63 @@
+*{
+    font-family: "proxima_nova_rgregular";
+    color: #282c3f;
+}
+.dat{
+    color: #686b78;
+    padding: 3vh 8vw;
+    font-size: larger;
+}
+.str{
+    height: 6vh;
+    margin-left: 15vw;
+    margin-top: -2vh;
+    color: #686b78;
+}
+
+.sub{
+    display: flex;
+    flex-direction: column;
+}
+.fullarea{
+    height:40vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #e9e9eb;
+    padding: 70px 0;
+    min-width: 100%;
+}
+.fullseg{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+.seg{
+    width: 33vw;
+    height:20vh;
+    text-align: center;
+}
+.g{
+    height: 20vh;
+    width: 100vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 0 45vw;
+}
+.tit{
+    font-weight: bolder;
+    font-size: large;
+}
+.fr{
+    padding: 5vh 0;
+    width: 15vw;
+    text-align: left;
+    color: #9fa1aa;
+    font-size: larger;
+    font-weight: bolder;
+    margin-left: -2vw;
+}
+
+.j{
+    width: 10vw;
+}

@@ -1,0 +1,21 @@
+<div class="fullarea">
+    <img class="foodimg" src='{{"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/"+food.food_img}}'>
+    <div class="data">
+        <span class="veg-indian-vegetarian"></span>
+         <span class="tit ">{{food.food_name}}</span>
+         
+    </div>
+    <span class="rate cat">{{food.food_category}}</span>
+
+    <div class="data ">
+        <span class="cat g">
+            ₹ {{food.food_rate}}
+        </span>
+        <button *ngIf="!buttontoggle" class="addbut " (click)='add($event)'>Add</button>
+        <div class="inc " *ngIf="buttontoggle">
+            <button class="but" (click)='inc($event)'>+</button>
+            <div class="countarea">{{count}}</div>
+            <button class="but" (click)='dec($event)'>-</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+
+<div class="fullarea">
+    <header class="head">
+       <div class="seg">
+           <span class="tit">{{restaurantdata.length}}&nbsp;&nbsp;restaurants</span>
+        </div> 
+       <div class="seg lu">
+           <ul>
+               <li>Relevance</li>
+               <li>Cost for two</li>
+               <li>Delivery time</li>
+               <li>Rating</li>
+               <li>Filter</li>
+
+           </ul>
+       </div>
+    </header>
+    <main class="hotelarea">
+        <app-hotelcard *ngFor="let restaurant of restaurantdata" [data]='restaurant'></app-hotelcard>
+    </main>
+</div>

@@ -1,0 +1,61 @@
+.fullarea{
+    display: flex;
+    height:15vh;
+    padding: 0 8vw 0 8vw;
+   background-color: white;
+   position: fixed;
+   box-shadow: 3px 6px 29px -21px rgba(0,0,0,0.75);
+   width: 84vw;
+   
+}
+.nati{
+    margin-left: 1vw;
+    color: #3d4152 ;
+}
+.p1{
+  
+    display: flex;
+    width: 50vw;
+    justify-content: center;
+    align-items: center;
+}
+.citytit{
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: larger;
+    padding-left: 1vw;
+    text-decoration-line: underline;
+}
+._8pSp- {
+    stroke: currentColor;
+    fill: #fc8019;
+    stroke-width: 0;
+    width: 50px;
+    height: 70px;
+    margin-left: -38vw;
+}
+._1GTCc {
+    position: relative;
+    stroke: currentColor;
+    fill: #3d4152;
+    stroke-width: 0;
+    height: 25px;
+    width: 25px;
+}
+.tab{
+    
+    font-family: roboto,sans-serif;
+    width: 8vw;
+    color: #3d4152;
+    font-size: larger;
+    font-weight: 600;
+    text-align: center;
+}
+.tab:hover > svg{
+
+    fill:#fc8019;
+    
+}
+.tab:hover > span{
+    color:#fc8019;
+}

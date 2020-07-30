@@ -1,0 +1,153 @@
+.fullarea{
+    height: 44vh;
+    font-family: "proxima_nova_rgregular";
+    
+    display: flex;
+    color: white;
+    background-color: #171a29;
+}
+.seg1{
+    width: 30vw;
+}
+.seg2{
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    padding-top: 12vh;
+}
+.seg3{
+   
+}
+.profimage{
+    height: 31vh;
+    width: 20vw;
+    margin-top: 7vh;
+    margin-left: 6vw;
+}
+.offerbox{
+    height: 29.9vh;
+    width: 21.6vw;
+    border: 1px solid #bec0c8;
+    margin-left: 22px;
+    margin-top: 89px;
+    padding: 0 0 0 0;
+}
+.oftitle{
+    position: static;
+    height: 5vh;
+    width: 5.5vw;
+    text-align: center;
+    font-family: "proxima_nova_rgbold";
+    font-weight: bolder;
+    font-size: 20px;
+    margin: -31.9vh 0 0 0;
+    background-color: #171a29;
+
+}
+.offers{
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;
+    margin: 36px 0px 0px 36px;
+    height: 20.9vh;
+    width: 17.3vw;
+
+}
+.icom{
+    height:20px;
+}
+.list{
+    list-style: none;
+    padding: 1vh;
+    font-size: large;
+}
+.title{
+    font-size: 38.4px;
+    padding-bottom: 2vh;
+}
+.cusine{
+    color: #bec0c8;
+    padding-bottom: 2vh;
+    font-size: 18px;
+}
+.box{
+    display: flex;
+      width: 27vw;
+}
+.ico{
+    height: 15px;
+    width: 15px;
+    padding-right: 0.6vw;
+}
+
+.sub{
+    display: flex;
+    flex-direction: column;
+    font-size: 19.2px;
+    font-weight: bold;
+    width: 33%;
+    height: 8vh;
+    text-align: center;
+    border-right: 1px solid #ccc4cf;
+}
+.sub:nth-last-child(1){
+    border-right: 0px solid red ;
+}
+.sub:nth-last-child(3){
+    text-align: start;
+}
+
+.subtit{
+    color:#bec0c8;
+    font-weight: lighter;
+    font-size: 14.4px;
+    padding-top: 1vh;
+}
+.icof{
+    height:20px;
+    width: 20px;
+    margin-left: 1vw;
+}
+.cus{
+    position: absolute;
+    width: 18vw;
+    margin-top: 29vh;
+    border: none;
+    background-color: white;
+    height: 7vh;
+    box-shadow: 3px 6px 20px -11px rgba(0,0,0,0.75);
+}
+.cus1{
+    margin-left: 19vw;
+    width: 9vw;
+    align-items: center;
+    font-family: "proxima_nova_rgbold";
+    color: #171a29;
+}
+.searchbox{
+    border: 0px solid white;
+    padding: 0 0 0 2vw;
+    width: 14vw;
+    border-style: none;
+}
+.searchbox:focus{
+    border:0px solid white;
+}
+.c{
+    margin-top: 13px;
+    height: 25px;
+    width: 22px;
+    fill: #646775;
+}
+.tex{
+    margin-left: 15px;
+}
+.cus2{
+    margin-left: 29vw;
+    align-items: center;
+    font-family: "proxima_nova_rgbold";
+    color: #171a29;
+}
+.d{
+    color: red;
+}

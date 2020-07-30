@@ -1,0 +1,28 @@
+.fullarea{
+    display: flex;
+    flex-direction: row;
+    height: 70vh;
+    font-family:  'proxima_nova_rgregular',;
+}
+.seg1{
+    width: 26vw;
+    border-right: 1px solid #dadada;
+}
+.seg2{
+    width:47vw;
+    overflow-y: overlay;
+    overflow-x: hidden;
+}
+.seg2::-webkit-scrollbar{
+    display: none;
+}
+.seg3::-webkit-scrollbar{
+    display: none;
+}
+.seg3{
+    width: 28vw;
+    padding-top: 4vh;
+    padding-left: 4vw;
+    overflow-y: overlay;
+    overflow-x: hidden;
+}

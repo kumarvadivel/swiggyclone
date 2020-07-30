@@ -1,0 +1,8 @@
+.icom{
+    height:20px;
+}
+.full{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}

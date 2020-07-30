@@ -1,0 +1,24 @@
+.fullarea{
+   
+    display: flex;
+    flex-direction: column;
+    padding: 10vh 0vw 5vh 1vw;
+    font-family:"proxima_nova_rgregular" ;
+}
+.foods{
+    font-size: 3rem;
+    font-weight: 600;
+    color: #282c3f;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-left: 1.4vw;
+}
+.foodarea{
+    display: flex;
+    flex-wrap: wrap;
+    width: 44vw;
+    
+}

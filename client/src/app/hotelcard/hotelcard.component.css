@@ -1,0 +1,107 @@
+.fullarea{
+    width:20vw;
+    background-color: white;
+    margin: 5vh 2vw 0vh 0vw;
+    border: 1px solid white;
+    
+
+}
+.ico{
+    fill: white;
+    height: 10px;
+}
+.datasub{
+    display: flex;
+    align-items: center;
+}
+.k{
+    padding-left: 1vw;
+    
+
+}
+.tr{
+    display: flex;
+    align-items: center;
+    color: #5d5b69;
+    padding-bottom: 2vh;
+    border-bottom: 1px solid #cfd0d4;
+}
+.offerarea{
+
+    padding:2vh 0vw 2vh 0;
+    margin-right: 1.5vw;
+    color: #8a584b;
+    border-bottom: 1px solid #cfd0d4;
+}
+.icom{
+    height:20px
+}
+.dot{
+    padding: 0 1vw 0 1vw;
+    
+}
+.colg{
+    background-color: 
+    #48c479;
+}
+.coly{
+    background-color: yellow;
+}
+.ico{
+    height: 10px;
+    width: 10px;
+}
+.ratings{
+    display: flex;
+    height: 20px;
+    width: 43px;
+    padding: 0 5px;
+    font-weight: 400;
+    
+}
+.cusine{
+    font-size: 15px;
+    color:#686b78;
+    padding:1vh 0 2vh 0
+}
+.dataarea{
+    display: flex;
+    flex-direction: column;
+    padding: 1vh 0 1vh 1vw ;
+    font-family: roboto,sans-serif;
+}
+.restaurant{
+        font-size: 22.4px;
+        color:#283c2f;
+        font-stretch: wider;
+        font-weight: bolder;
+}
+.imagearea{
+    height: 32vh;
+    width: 19vw;
+    padding: 1vw;
+}
+.prof{
+    background-size: cover;
+    height: 32vh;
+    width: 18vw;
+}
+.qv{
+    text-align: center;
+    margin-left: -42px;
+    color: #fff;
+    font-family: inherit;
+    font-size: larger;
+    padding: 2vh 0 2vh 0;
+}
+.fullarea:hover{
+    border: 1px solid #cfd0d4;
+    box-shadow: 0px 2px 10px -3px rgba(0,0,0,0.75);
+}
+.ratingdas{
+    font-family: roboto,sans-serif;
+    color: white;
+}
+.fullarea:hover  .qv {
+   color: #5d8ed5;
+}

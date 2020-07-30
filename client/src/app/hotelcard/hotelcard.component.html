@@ -1,0 +1,32 @@
+<div class="fullarea" (click)="restaurant($event)">
+    <div class="imagearea">
+        <img src="{{'https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/'+data.hotel_image}}" class="prof">
+    </div>
+    
+    <div class="dataarea">
+        <span class="restaurant">{{data.restaurant_name}}</span>
+        <span class="cusine">{{data.cusine}}</span>
+        <div class="datasub">
+            <span class="tr">
+                
+                <div class="ratings colg" >
+                    <span class="icon-star _537e4" ><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="svg-inline--fa fa-star fa-w-18 fa-2x ico"><path fill="white" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z" class=""></path></svg></span>
+                    
+                    <span class="ratingdas">{{data.ratings}}</span>
+                </div>
+                <div class="dot">•</div>
+                {{data.deliverytime}}
+                <div class="dot">•</div>
+                <div class="nVWSi">₹{{data.cost_for_two}} FOR TWO</div>
+            </span>
+
+        </div>
+        <div class="offerarea">
+            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="badge-percent" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-badge-percent fa-w-16 fa-2x icom"><path fill="#8a584b" d="M512 256c0-37.7-23.7-69.9-57.1-82.4 14.7-32.4 8.8-71.9-17.9-98.6-26.7-26.7-66.2-32.6-98.6-17.9C325.9 23.7 293.7 0 256 0s-69.9 23.7-82.4 57.1c-32.4-14.7-72-8.8-98.6 17.9-26.7 26.7-32.6 66.2-17.9 98.6C23.7 186.1 0 218.3 0 256s23.7 69.9 57.1 82.4c-14.7 32.4-8.8 72 17.9 98.6 26.6 26.6 66.1 32.7 98.6 17.9 12.5 33.3 44.7 57.1 82.4 57.1s69.9-23.7 82.4-57.1c32.6 14.8 72 8.7 98.6-17.9 26.7-26.7 32.6-66.2 17.9-98.6 33.4-12.5 57.1-44.7 57.1-82.4zm-320-96c17.67 0 32 14.33 32 32s-14.33 32-32 32-32-14.33-32-32 14.33-32 32-32zm12.28 181.65c-6.25 6.25-16.38 6.25-22.63 0l-11.31-11.31c-6.25-6.25-6.25-16.38 0-22.63l137.37-137.37c6.25-6.25 16.38-6.25 22.63 0l11.31 11.31c6.25 6.25 6.25 16.38 0 22.63L204.28 341.65zM320 352c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32z" class=""></path></svg>
+            <span class="k">{{data.offer[0].substring(0,18)}}</span>
+        </div>
+        <div class="qv" (click)="restaurant($event)">Quickview</div>
+    </div>
+    
+</div>
+

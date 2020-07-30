@@ -1,0 +1,38 @@
+.fullarea2{
+    background-color: #2b1e16;
+    height: 80vh;
+    display: flex;
+}
+.col{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    width: 33vw;
+}
+.contimg{
+    margin-top: -40px;
+    height:40vh;
+    color: white;
+}
+.e{
+    margin-top: -10px;
+}
+.title{
+    color: white;
+    font-family: Roboto,sans-serif;font-weight: 600;
+    font-size:24px;
+
+}
+.body{
+    color: #c3babb;
+    font-family: Roboto,sans-serif;
+    font-size:19.5px;
+    text-align: left;
+    line-break: strict;
+    padding: 0 100px;
+    margin-top: -54px;
+    margin-left: 10px;
+
+}

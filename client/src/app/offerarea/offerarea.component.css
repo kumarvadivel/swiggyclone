@@ -1,0 +1,19 @@
+.fullarea{
+    display: flex;
+    padding-top: 15vh;
+    padding-left: 1vw;
+    height: 55vh;
+    background-color: #171a29;
+}
+.imgarea{
+    height: 45vh;
+    width: 20vw;
+    margin-top: 6vh;
+    margin-right: 6vh;
+    margin-left: 4vh;
+    transition: transform .5s ease;
+}
+.imgarea:hover{
+    transform: scale(1.1);
+    bottom: 0;
+}

@@ -1,0 +1,57 @@
+.fullarea{
+    padding: 10vh 5vw 5vh 5vw;
+}
+.head{
+    display: flex;
+    height: 5vh;
+    border-bottom: 0.1px solid #bebfc5;
+    
+}
+ul{
+    display: flex;
+    padding-bottom: 2vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 5vh;
+    list-style: none;
+    text-align: center;
+}
+.seg{
+    width: 50vw;
+}
+
+li{
+    font-family: roboto,sans-serif;
+    width: 12vw;
+    color: #282c3f;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: -webkit-center;
+    
+}
+.cole{
+    background-color: #282c3f;
+}
+.ratings{
+    height: 20px;
+    width: 43px;
+    padding: 0 5px;
+    font-weight: 400;
+    background-color: yellowgreen;
+}
+.tit{
+    font-family: roboto,sans-serif;
+    font-size: 33.6px;
+    color: #282c3f;
+    font-weight: bold;
+    padding-bottom: 1vh;
+}
+.hotelarea{
+    display: flex;
+    flex-wrap: wrap;
+}
+li:a{
+    font-size: 1rem;
+    border-bottom: 1px solid slategrey;
+}

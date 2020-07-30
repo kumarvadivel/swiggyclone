@@ -1,0 +1,14 @@
+.fullarea{
+    height: 3vh;
+    background-color: #fcfcfc;
+    color: #5a555a;
+    font-family: roboto,sans-serif;
+    font-size: 12px;
+    padding: 13px 3vw 5px 3vw;
+    justify-content: center;
+}
+.crumb{
+    padding: 1vh 0 1vh 0;
+    margin-left: 4vw;
+
+}

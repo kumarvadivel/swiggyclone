@@ -1,0 +1,112 @@
+<app-navbar></app-navbar>
+<div class="fullarea">
+    <div class="seg1">
+        <div class="box1">
+            <div class="sub" *ngIf="box1state=='NOTLOGGEDIN'">
+                <span class="boxtit">Account</span>
+                <span class="boxsub">To place your order now, log in to your existing account or sign up.</span>
+                
+                <div class="buttonarea" >
+                    <button (click)="logintoggler($event)" class="login lp">
+                        <span class="fq">Have an account ?</span>
+                        <span class="me">LOG IN</span>
+                    </button>
+                    <button (click)="signuptoggler($event)" class="signup sp">
+                        <span class="fq">New to Swiggy ?</span>
+                        <span class="me">signup</span>
+
+                    </button>
+                </div>
+            </div>
+            <div class="sub" *ngIf="box1state=='LOGIN'">
+                <span class="boxtit">Account</span>
+                <span class="boxsub">To place your order now, log in to your existing account or sign up.</span>
+                
+                <div class="loginarea" >
+                <span>
+                    <span class="dw">Enter login details or</span><span (click)="signuptoggler($event)" class="link">&nbsp;create an account</span>  
+                </span> 
+                <form (submit)='loginreq($event)' [formGroup]="loginform">
+                    <input type="text" class="locfield" placeholder="Username" formControlName="username"/>
+                    <input type="password" class="locfield" placeholder="Password" formControlName="password"/>
+                    <input type="submit" class="but" value="LogIn"/>
+                </form>
+                
+                </div>
+            </div>
+            <div class="sub" *ngIf="box1state=='SIGNUP'">
+                <span class="boxtit">Account</span>
+                <span class="boxsub">To place your order now, log in to your existing account or sign up.</span>
+                
+                <div class="loginarea">
+                    <span>
+                        <span class="dw">signup or</span><span (click)="logintoggler($event)" class="link">&nbsp;login in to your account</span>  
+                    </span> 
+                    <form (submit)='signupreq($event)' [formGroup]="signupform">
+                        <input type="text" placeholder="Enter Firstname" class="locfield p l" formControlName="firstname">
+                        <input type="text" placeholder="Enter Lastname" class="locfield p l" formControlName="lastname" >
+                        <input type="text" placeholder="Enter Username" class="locfield p" formControlName="username">
+                        <input type="text" placeholder="Enter Email" class="locfield p l" formControlName="email" >
+                        <input type="number" placeholder="Enter Phone" class="locfield p l" formControlName="phone">
+                        <input type="text" placeholder="Enter Address" class="locfield p l" formControlName="address">
+                         <input type="text" placeholder="Enter city" class="locfield p l" formControlName="city">
+                         <input type="password" placeholder="Enter password" class="locfield p l" formControlName="password">
+                        <input type="password" placeholder="Confirm Password" class="locfield p l" formControlName="confirmpassword">
+        
+                         <input type="submit" class="but" value="Signup"/>
+                    </form>
+                </div>
+                
+            </div>
+            <div class="sub" *ngIf="box1state=='LOGGEDIN'">
+                <span class="boxtit">Logged in
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="122.881px" height="122.88px" viewBox="0 0 122.881 122.88" enable-background="new 0 0 122.881 122.88" xml:space="preserve" class="fgm"><g><path fill-rule="evenodd" clip-rule="evenodd" d="M61.44,0c33.933,0,61.441,27.507,61.441,61.439 c0,33.933-27.508,61.44-61.441,61.44C27.508,122.88,0,95.372,0,61.439C0,27.507,27.508,0,61.44,0L61.44,0z M34.106,67.678 l-0.015-0.014c-0.785-0.718-1.207-1.685-1.256-2.669c-0.049-0.982,0.275-1.985,0.984-2.777c0.01-0.011,0.019-0.021,0.029-0.031 c0.717-0.784,1.684-1.207,2.668-1.256c0.989-0.049,1.998,0.28,2.792,0.998l12.956,11.748l31.089-32.559v0 c0.74-0.776,1.723-1.18,2.719-1.204c0.992-0.025,1.994,0.329,2.771,1.067v0.001c0.777,0.739,1.18,1.724,1.205,2.718 c0.025,0.993-0.33,1.997-1.068,2.773L55.279,81.769c-0.023,0.024-0.048,0.047-0.073,0.067c-0.715,0.715-1.649,1.095-2.598,1.13 c-0.974,0.037-1.963-0.293-2.744-1L34.118,67.688L34.106,67.678L34.106,67.678L34.106,67.678z" style="&#10;    fill: #60b246;&#10;"/></g></svg>
+                </span>
+                   
+                <span class="boxsub h">{{logindata.username}} | {{phonenumber}}</span> 
+                
+            </div>
+            <div class="sub1" *ngIf="box1state!=='LOGGEDIN'">
+                <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_147,h_140/Image-login_btpq7r">
+            </div>
+           
+        </div>
+        <div class="box1 j">
+            <div class="sub" *ngIf="box2state=='DISABLED'">
+                <span class="boxtit ur">Delivery address</span>
+            </div>
+            <div class="sub hfr" *ngIf="box2state=='ACTIVE'">
+                <span class="boxtit ml"> Select delivery address</span>
+                <span class="boxsub">you have saved address in this location</span>
+                <div class="addressbox">
+                    <div class="subbox">
+                        <div class="subboxsub">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2c3.196 0 6 2.618 6 5.602 0 2.238-1.058 3.488-2.659 5.381-1.078 1.274-2.303 2.722-3.341 4.697-1.038-1.976-2.263-3.423-3.341-4.697-1.601-1.893-2.659-3.143-2.659-5.381 0-2.984 2.804-5.602 6-5.602zm0-2c-4.198 0-8 3.403-8 7.602 0 6.243 6.377 6.903 8 16.398 1.623-9.495 8-10.155 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"/></svg>
+                        </div>
+                        <div class="fqd">
+                            <span class="lo">Other</span>
+                            <span>{{logindata.address}}</span>
+                        </div>
+                    </div>
+                    <div class="subbox">
+                        <div class="subboxsub">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2c3.196 0 6 2.618 6 5.602 0 2.238-1.058 3.488-2.659 5.381-1.078 1.274-2.303 2.722-3.341 4.697-1.038-1.976-2.263-3.423-3.341-4.697-1.601-1.893-2.659-3.143-2.659-5.381 0-2.984 2.804-5.602 6-5.602zm0-2c-4.198 0-8 3.403-8 7.602 0 6.243 6.377 6.903 8 16.398 1.623-9.495 8-10.155 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"/></svg>
+                            <svg style="
+                            height: 1.6vh;
+                            position: absolute;
+                            margin-left: -18px;
+                            margin-top: -7px;
+                        " xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="green" d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6 13h-5v5h-2v-5h-5v-2h5v-5h2v5h5v2z"/></svg>
+                        </div>
+                        <div class="fqd">
+                            <span class="lo">Add New Address</span>
+                            <span>{{currentcity}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="seg2">b</div>
+</div>
+
