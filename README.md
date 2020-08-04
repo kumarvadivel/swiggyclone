@@ -35,3 +35,6 @@ all the credits goes to developers of www.swiggy.com
         
         
         have a happy life
+        
+  <strong>For queries contact:</strong>
+                email:kumarvadivel1999@gmail.com
