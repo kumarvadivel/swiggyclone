@@ -1,5 +1,5 @@
 .fullarea{
     padding-top: 15vh;
     overflow-y: visible;
-    overflow-y: hidden;
+    overflow-x: hidden;
 }

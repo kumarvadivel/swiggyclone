@@ -10,7 +10,7 @@ class AuthController < ApplicationController
                 render json:{token: token, exp:exp.strftime('%d-%m-%Y %H:%M' ),
                     username:user.username}
             else
-                render json:{errors:'bad credentials'},status: :forbidden
+                render json:{errors:'bad credentials'}
             end
         else
             user =User.find_by(username:params[:username])
@@ -22,7 +22,7 @@ class AuthController < ApplicationController
                 render json:{token: token, exp:exp.strftime('%d-%m-%Y %H:%M' ),
                                 username:user.username}
             else
-                render json:{errors:'bad credentials'},status: :forbidden
+                render json:{errors:'bad credentials'}
             end
         end
     end

@@ -26,4 +26,11 @@ class RestaurantController < ApplicationController
     def gethotel
         render json:Restaurant.find_by(_id: params[:id])
     end
+    def gethoteldata
+        if Restaurant.find_by(city: params[:city] , restaurant_name: params[:name])
+            render json:Restaurant.find_by(city: params[:city] , restaurant_name: params[:name])
+        else
+            render json:{message:"hotel not found"}
+        end
+    end
 end

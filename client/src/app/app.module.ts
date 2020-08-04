@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CommonModule } from '@angular/common';
+import { ToastrModule } from 'ngx-toastr';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
@@ -33,6 +35,7 @@ import { HotelfoodComponent } from './components/hotelfood/hotelfood.component';
 import { FoodcardComponent } from './components/foodcard/foodcard.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { AddressComponent } from './components/address/address.component';
+import { ProfileComponent } from './profile/profile.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -59,7 +62,8 @@ import { AddressComponent } from './components/address/address.component';
     HotelfoodComponent,
     FoodcardComponent,
     CheckoutComponent,
-    AddressComponent
+    AddressComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -67,8 +71,10 @@ import { AddressComponent } from './components/address/address.component';
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
-    SnotifyModule,FontAwesomeModule
-    
+    SnotifyModule,FontAwesomeModule,
+    CommonModule,
+    BrowserAnimationsModule, // required animations module
+    ToastrModule.forRoot() 
     
   ],
   providers: [

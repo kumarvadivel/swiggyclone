@@ -27,7 +27,7 @@ inc($event,hotelname,foodname){
     localStorage.setItem("cart",JSON.stringify(this.data))
     this.refresh()
     //console.log(hotelname,foodname)
-    this.sharedcartService.sendincClickEvent()
+  
     
 }
 dec($event,hotelname,foodname){
@@ -46,7 +46,7 @@ dec($event,hotelname,foodname){
       localStorage.setItem("cart",JSON.stringify(this.data))
       this.refresh()
     }
-    this.sharedcartService.senddecClickEvent()
+  
 }
 remove($event,hotelname,foodname){
   //console.log("inc")
